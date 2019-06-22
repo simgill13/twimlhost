@@ -11,7 +11,6 @@ const PORT =  (process.env.PORT || 9000)
 
 
 
-console.log("++++ENV",env)
 
 
 app.use('/static', express.static(path.join(__dirname, './public')))
