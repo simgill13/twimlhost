@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 const path = require('path');
 const DATABASE_URL = process.env.DATABASE_URL || global.DATABASE_URL || env.DATABASE_URL;
 const PORT =  (process.env.PORT || 9000)
-
+const fs = require('fs');
 
 
 
@@ -26,7 +26,10 @@ app.use(function(req, res, next) {
 
 
 
-
+app.post('/voice.xml', function(req, res){
+  res.contentType('application/xml');
+  res.sendFile('/voice.xml');
+});
 
 
 
