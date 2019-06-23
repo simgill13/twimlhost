@@ -26,11 +26,17 @@ app.use(function(req, res, next) {
 
 
 
-app.post('/sim/voice.xml', function(req, res){
-  res.contentType('application/xml');
-  res.sendFile('/voice.xml');
-});
+// app.post('/sim/voice.xml', function(req, res){
+//   res.contentType('application/xml');
+//   res.sendFile('/voice.xml');
+// });
 
+
+console.log("+++",path.join(__dirname , 'voice.xml'))
+app.post('/data/voice', function(req, res){
+  res.contentType('application/xml');
+  res.sendFile(path.join(__dirname , 'voice.xml'));
+});
 
 
 
