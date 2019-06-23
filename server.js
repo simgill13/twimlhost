@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
 
 
 console.log("+++",path.join(__dirname , 'voice.xml'))
-app.post('/data/voice', function(req, res){
+app.get('/data/voice', function(req, res){
   res.contentType('application/xml');
   res.sendFile(path.join(__dirname , 'voice.xml'));
 });
