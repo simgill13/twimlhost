@@ -26,7 +26,7 @@ app.use(function(req, res, next) {
 
 
 
-app.post('/voice.xml', function(req, res){
+app.post('/sim/voice.xml', function(req, res){
   res.contentType('application/xml');
   res.sendFile('/voice.xml');
 });
